@@ -12,11 +12,10 @@ export function useScrollSpy(sectionIds: string[], offset: number = 0) {
       for (const sectionId of sectionIds) {
         const element = document.getElementById(sectionId);
         if (element) {
-          const { offsetTop, offsetHeight } = element;
-          if (
-            scrollPosition >= offsetTop &&
-            scrollPosition < offsetTop + offsetHeight
-          ) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const elementBottom = elementTop + rect.height;
+          if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
             setActiveSection(sectionId);
             break;
           }
