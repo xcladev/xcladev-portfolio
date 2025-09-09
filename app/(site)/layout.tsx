@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/site/navbar";
 import { ScrollProgress } from "@/components/site/scroll-progress";
 import { ScrollToTop } from "@/components/site/scroll-to-top";
+import { Toaster } from "@/components/ui/sonner";
 
 export default function SiteLayout({
   children,
@@ -10,6 +11,7 @@ export default function SiteLayout({
   return (
     <div className="min-h-screen">
       <ScrollProgress />
+      <Toaster />
       <Navbar />
       <main>{children}</main>
       <ScrollToTop />
