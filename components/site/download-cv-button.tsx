@@ -1,3 +1,5 @@
++"use client";
+
 import { Button } from "@/components/ui/button";
 import { Download, Loader2 } from "lucide-react";
 import { useState } from "react";
@@ -17,7 +19,7 @@ export function DownloadCvButton() {
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = "/CV_Sergi_Cladera.pdf";
+      link.download = "CV_Sergi_Cladera.pdf";
       document.body.appendChild(link);
       link.click();
       link.remove();
