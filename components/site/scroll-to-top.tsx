@@ -4,7 +4,11 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronUp } from "lucide-react";
 
-export function ScrollToTop() {
+interface ScrollToTopProps {
+  isMenuOpen?: boolean;
+}
+
+export function ScrollToTop({ isMenuOpen = false }: ScrollToTopProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -29,7 +33,7 @@ export function ScrollToTop() {
 
   return (
     <>
-      {isVisible && (
+      {isVisible && !isMenuOpen && (
         <Button
           onClick={scrollToTop}
           size="icon"

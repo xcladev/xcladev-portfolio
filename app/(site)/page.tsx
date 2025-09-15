@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   Card,
   CardContent,
@@ -45,6 +46,7 @@ import { animations, hoverEffects } from "@/lib/utils";
 import { AnimatedBackground } from "@/components/site/animated-background";
 import Typewriter from "typewriter-effect";
 import { toast } from "sonner";
+import foto from "@/public/foto-portfolio.webp";
 
 export default function Page() {
   return (
@@ -59,11 +61,16 @@ export default function Page() {
           <div className="container mx-auto px-4 py-20">
             <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-12">
               <Avatar
-                className={`w-48 h-48 lg:w-64 lg:h-64 shadow-lg ${hoverEffects.cardHover}`}
+                className={`relative w-48 h-48 lg:w-64 lg:h-64 shadow-lg ${hoverEffects.cardHover}`}
               >
-                <AvatarImage
-                  src="https://avatars.githubusercontent.com/u/202400088?v=4"
-                  alt="avatar-sergi"
+                <Image
+                  src={foto}
+                  alt="Foto de perfil de Sergi"
+                  fill
+                  sizes="(max-width: 1024px) 192px, 256px"
+                  priority
+                  placeholder="blur"
+                  className="rounded-full object-cover"
                 />
                 <AvatarFallback className="text-3xl lg:text-4xl">
                   SC
@@ -650,14 +657,15 @@ export default function Page() {
                   <CardHeader>
                     <CardTitle>Disponibilidad</CardTitle>
                     <CardDescription>
-                      Actualmente trabajando en Sidetours S.L., pero abierto a freelance, colaboraciones y nuevas oportunidades profesionales.
+                      Actualmente trabajando en Sidetours S.L., pero abierto a
+                      freelance, colaboraciones y nuevas oportunidades
+                      profesionales.
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="space-y-2 text-center">
                       <p className="font-medium">Estado</p>
                       <div className="flex justify-center">
-
                         <Badge variant="outline">
                           <span className="relative flex h-2.5 w-2.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -670,7 +678,8 @@ export default function Page() {
                     <div className="space-y-2">
                       <p className="font-medium">Tipo de proyectos</p>
                       <p className="text-muted-foreground">
-                      Backend / Full Stack · Freelance · Colaboraciones tecnológicas
+                        Backend / Full Stack · Freelance · Colaboraciones
+                        tecnológicas
                       </p>
                     </div>
                   </CardContent>
