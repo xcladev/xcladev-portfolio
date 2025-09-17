@@ -28,9 +28,9 @@ function AnimatedBackgroundContent() {
             "rgba(59, 130, 246, 0.15)",
           ]
         : [
-            "rgba(59, 130, 246, 0.4)",
-            "rgba(99, 102, 241, 0.3)",
-            "rgba(79, 70, 229, 0.2)",
+            "rgba(59, 130, 246, 0.5)",
+            "rgba(99, 102, 241, 0.4)",
+            "rgba(79, 70, 229, 0.3)",
           ];
 
     const resizeCanvas = () => {
@@ -86,7 +86,7 @@ function AnimatedBackgroundContent() {
       window.cancelAnimationFrame(animationFrameId);
       window.removeEventListener("resize", resizeCanvas);
     };
-  }, [theme]);
+  }, []);
 
   return (
     <div className="fixed inset-0 w-full h-screen -z-10">

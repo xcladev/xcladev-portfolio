@@ -7,11 +7,11 @@ import { Sun, Moon } from "lucide-react";
 export function ModeToggle() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme, resolvedTheme } = useTheme();
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+
   if (!mounted) {
     return (
       <Button
@@ -20,13 +20,13 @@ export function ModeToggle() {
         aria-label="Toggle theme"
         className="invisible"
       >
-        <Sun className="h-4 w-4" />
+        <Moon className="h-4 w-4" />
       </Button>
     );
   }
-  
+
   const isDark = resolvedTheme === "dark";
-  
+
   return (
     <Button
       className="cursor-pointer"
