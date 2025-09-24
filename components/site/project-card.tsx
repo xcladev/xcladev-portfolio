@@ -20,11 +20,9 @@ import {
   Brain,
 } from "lucide-react";
 import type { Project, TechId } from "@/lib/types/project";
+import type { LucideIcon } from "lucide-react";
 
-const TECH_META: Record<
-  TechId,
-  { icon: React.ComponentType<any>; label: string }
-> = {
+const TECH_META: Record<TechId, { icon: LucideIcon; label: string }> = {
   laravel: { icon: Code2, label: "Laravel" },
   python: { icon: Code2, label: "Python" },
   fastapi: { icon: Code2, label: "FastAPI" },
