@@ -16,8 +16,8 @@ function AnimatedBackgroundContent() {
 
     let animationFrameId: number;
     let time = 0;
-    const points = 5;
-    const max = 6.4;
+    // const points = 5;
+    // const max = 6.4;
     const speed = 0.002;
 
     const colors =
