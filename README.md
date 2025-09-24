@@ -139,7 +139,7 @@ El proyecto es compatible con cualquier proveedor que soporte Next.js:
 Crea un archivo `.env.local` para configuraciones locales:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://sergicladera.com
+NEXT_PUBLIC_SITE_URL=https://xcladev.com
 ```
 
 ### Personalización
